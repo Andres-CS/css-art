@@ -1,0 +1,36 @@
+body{
+    background: lightblue;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+
+.container{
+    border: dotted black;
+    display: flex;
+    position: relative;
+    width:400px;
+    height:300px;
+    align-items: center;
+}
+
+.cat{
+    background-color: #f19b1a;
+    height: 65px;
+    width: 80px;
+    border-radius: 0 80px 80px 0;
+    position: absolute;
+    right: 50px;
+}
+
+.ears{
+    height: 15px;
+    width: 15px;
+    background-color: #f19b1a;
+    position: absolute;
+    bottom: 65px;
+    left:8px;
+    border-radius: 80px 0 0 0;
+    box-shadow: 25px 0 #f19b1a;
+}

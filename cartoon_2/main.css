@@ -1,0 +1,162 @@
+body{
+    background: white;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+
+.cat-container{
+    /* border: dotted black; */
+    display: flex;
+    position: relative;
+    width:350px;
+    height:200px;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.cat{
+    background-color: #f19b1a;
+    height: 65px;
+    width: 80px;
+    border-radius: 0 80px 80px 0;
+    position: absolute;
+    right: 50px;
+}
+
+.ears{
+    height: 15px;
+    width: 15px;
+    background-color: #f19b1a;
+    position: absolute;
+    bottom: 65px;
+    left:8px;
+    border-radius: 80px 0 0 0;
+    box-shadow: 25px 0 #f19b1a;
+}
+
+.eyes, .eyes::before{
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 0 0 15px 15px;
+    border-top: none;
+}
+.eyes{
+    top:15px;
+    left: 20px;
+}
+.eyes::before{
+    content:"";
+    left:25px;
+}
+
+.nose{
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top:30px;
+    left:30px;
+    box-shadow: 10px 0 white;
+}
+.nose::before{
+    content: "";
+    width:12px;
+    height: 8px;
+    position: absolute;
+    background-color: white;
+    left:6px;
+}
+.nose::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    /* Technique used to create triangles */
+    border-top: 8px solid #ef926b;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    left:6px;
+}
+
+.mouth{
+    width:15px;
+    height: 8px;
+    background-color: grey;
+    position: relative;
+    top:42px;
+    left:34px;
+    border-radius: 0 0 5px 5px;
+    animation: mouth-move 2s infinite;
+    transform-origin: top;
+}
+
+@keyframes mouth-move {
+    50% {
+        transform: scaleY(0.7);
+    }
+}
+
+.body{
+    width: 130px;
+    height: 95px;
+    right: 72px;
+    bottom: 0px;
+    background-color: #f19b1a;
+    position: absolute;
+    border-radius: 60% 60% 0 0;
+    animation: sleepbreathing 2s infinite;
+    transform-origin: bottom right;
+    z-index: 1;
+    
+    &::before{
+        content:"";
+        position: absolute;
+        width: 25px;
+        height: 12px;
+        background-color: white;
+        border-radius: 60px;
+        top:85px;
+        left:20px;
+        box-shadow: 45px 0 white ;
+    }
+}
+
+@keyframes sleepbreathing {
+    50%{
+        transform: scaleY(0.95);
+        transform: scaleX(1.05);
+    }    
+}
+
+.tail{
+    width: 100px;
+    height: 20px;
+    background-color: #d07219;
+    position: absolute;
+    bottom: 0px;
+    right:180px;
+    border-radius:20px 0 0 20px;
+    z-index: 0;
+}
+
+.bubble{
+    height: 20px;
+    width:20px;
+    background-color: rgba(255,255,255,0.4);
+    position: absolute;
+    left:65px;
+    top: 20px;
+    border-radius: 50px 50px 50px 5px;
+    animation: bubble-scale 2s infinite;
+}
+
+@keyframes bubble-scale {
+    50%{
+        transform: scale(1.6);
+    }
+}

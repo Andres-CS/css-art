@@ -44,7 +44,7 @@ body{
     border-top: none;
 }
 .eyes{
-    top:25px;
+    top:15px;
     left: 20px;
 }
 .eyes::before{
@@ -58,9 +58,9 @@ body{
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top:40px;
-    box-shadow: 10px 0 white;
+    top:30px;
     left:30px;
+    box-shadow: 10px 0 white;
 }
 .nose::before{
     content: "";
@@ -69,4 +69,33 @@ body{
     position: absolute;
     background-color: white;
     left:6px;
+}
+.nose::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    /* Technique used to create triangles */
+    border-top: 8px solid #ef926b;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    left:6px;
+}
+
+.mouth{
+    width:15px;
+    height: 8px;
+    background-color: grey;
+    position: absolute;
+    top:42px;
+    left:34px;
+    border-radius: 0 0 5px 5px;
+    animation: mouth-move 2s infinite;
+    transform-origin: top;
+}
+
+@keyframes mouth-move {
+    50% {
+        transform: scaleY(0.7);
+    }
 }

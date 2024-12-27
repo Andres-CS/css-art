@@ -1,18 +1,19 @@
 body{
-    background: lightblue;
+    background: white;
     height: 100vh;
     display: grid;
     place-items: center;
     margin: 0;
 }
 
-.container{
-    border: dotted black;
+.cat-container{
+    /* border: dotted black; */
     display: flex;
     position: relative;
-    width:400px;
-    height:300px;
+    width:350px;
+    height:200px;
     align-items: center;
+    background-color: lightblue;
 }
 
 .cat{
